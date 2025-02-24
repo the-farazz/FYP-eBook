@@ -37,7 +37,7 @@ const Navbar = () => {
     {
       title: "Publisher Profile",
       link: "/profile",
-    }
+    },
   ];
   const [Nav, setNav] = useState("hidden");
   if (isLoggedIn === false) {
@@ -52,16 +52,16 @@ const Navbar = () => {
     const lastTwo = links[3];
     links = [...firstTwo, lastTwo];
   }
-  if (role === "publisher"){
+  if (role === "publisher") {
     const firstTwo = links.slice(0, 2);
     const lastTwo = links.slice(-3);
     links = [...firstTwo, ...lastTwo];
   }
-  
+
   return (
     <>
       <nav
-        className="relative flex w-full flex-nowrap items-center justify-between bg-dream-green py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
+        className="relative flex w-full flex-nowrap items-center justify-between bg-[#007E6F] py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
         data-twe-navbar-ref
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
@@ -75,7 +75,7 @@ const Navbar = () => {
                 alt="logo"
                 className="h-10 me-4"
               />{" "}
-              BookHeaven
+              Kitaab Ghar
             </Link>
           </div>
           <div className=" w-1/6 block  lg:hidden">
@@ -101,7 +101,7 @@ const Navbar = () => {
               {links.map((items, i) => (
                 <>
                   {items.title === "Profile" ||
-                  items.title === "Admin Profile" || 
+                  items.title === "Admin Profile" ||
                   items.title === "Publisher Profile" ? (
                     <div
                       className=" rounded  hover:cursor-pointer border border-white px-3 py-1 mx-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
@@ -133,7 +133,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/signup"
-                    className="rounded  bg-white px-3 py-1 mx-3 hover:bg-dream-green text-zinc-600 hover:text-zinc-900 transition-all duration-300"
+                    className="rounded  bg-white px-3 py-1 mx-3 hover:bg-[#007E6F] text-zinc-600 hover:text-zinc-900 transition-all duration-300"
                   >
                     SignUp
                   </Link>
@@ -147,7 +147,9 @@ const Navbar = () => {
         <div className="flex flex-col items-center">
           {links.map((items, i) => (
             <>
-              {items.title === "Profile" || items.title === "Admin Profile" || items.title === "Publisher Profile" ? (
+              {items.title === "Profile" ||
+              items.title === "Admin Profile" ||
+              items.title === "Publisher Profile" ? (
                 <div
                   className=" rounded  hover:cursor-pointer border border-blue-500 px-3 py-1 my-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
                   key={i}

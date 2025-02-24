@@ -17,9 +17,9 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="bg-dream-green px-12 py-8  ">
+    <div className="bg-[#007E6F] px-12 py-8  ">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-semibold text-zinc-100">BookHeaven</h2>
+        <h2 className="text-3xl font-semibold text-zinc-100">Kitaab Ghar</h2>
         <div className="flex flex-col md:flex-row">
           {links.map((items, i) => (
             <Link
@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <hr className="my-4" />
       <p className="text-center p-0 text-zinc-200">
-        © 2024 BookHeaven. All Rights Reserved.
+        © 2024 Kitaab Ghar. All Rights Reserved.
       </p>
     </div>
   );
