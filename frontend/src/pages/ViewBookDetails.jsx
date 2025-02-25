@@ -258,10 +258,10 @@ const goToNextPage = () => {
     <>
         <button
             onClick={handleReadBook}
-            className="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
-            disabled={isLoading} // Disable the button when loading
+            className="mt-4 bg-[#007E6F] text-white py-2 px-4 rounded hover:bg-[#007E6F]"
+            disabled={isLoading} 
         >
-            {isLoading ? 'Loading...' : 'Read Book'} {/* Change button text based on loading state */}
+            {isLoading ? 'Loading...' : 'Read Book'}
         </button>
 
         {isModalOpen && (

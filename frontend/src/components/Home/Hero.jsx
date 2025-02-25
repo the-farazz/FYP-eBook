@@ -37,12 +37,18 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-start">
             <Link
               to="/all-books"
-              className="relative overflow-hidden my-5 lg:my-8 text-lg bg-black text-white rounded-lg py-3 px-8 flex items-center justify-center font-semibold border-2 border-transparent hover:border-[#007E6F] hover:bg-gradient-to-r hover:from-[#007E6F] hover:to-[#005f56] hover:text-white transition-all duration-300 font-poppins group active:scale-95"
+              className="relative p-0.5 inline-flex items-center justify-center font-semibold overflow-hidden group rounded-lg my-5 lg:my-8 text-lg font-poppins active:scale-95"
             >
-              <span className="relative z-10">Discover More</span>
-              <FaRegArrowAltCircleRight className="ml-2 text-lg relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
-              <span className="absolute inset-0 bg-gradient-to-r from-[#007E6F] to-[#005f56] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#007E6F] via-[#005f56] to-[#003d3a] group-hover:from-[#003d3a] group-hover:via-[#005f56] group-hover:to-[#007E6F] transition-all duration-500"></span>
+
+              <span className="relative px-8 py-3 bg-black text-white rounded-lg transition-all ease-out duration-500 group-hover:bg-opacity-0">
+                <span className="relative flex items-center">
+                  Discover More
+                  <FaRegArrowAltCircleRight className="ml-2 text-lg transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </span>
             </Link>
+
           </div>
         </div>
       </div>
