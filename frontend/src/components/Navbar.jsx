@@ -63,17 +63,19 @@ const Navbar = () => {
       <nav
         className="relative flex w-full flex-nowrap items-center justify-between bg-[#007E6F] py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
         data-twe-navbar-ref
+        src="./../public/logo.png"
+
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <div className="ms-2  w-3/6 lg:w-1/6">
             <Link
               to="/"
               className="flex text-2xl font-semibold items-center justify-center "
-            >
+              >
               <img
-                src="https://cdn-icons-png.flaticon.com/128/10433/10433049.png"
+                src="./../public/logo.png"
                 alt="logo"
-                className="h-10 me-4"
+                className="h-12 w-12 me-4 text-white"
               />{" "}
               Kitaab Ghar
             </Link>
