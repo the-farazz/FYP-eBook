@@ -37,7 +37,7 @@ const Navbar = () => {
     {
       title: "Publisher Profile",
       link: "/profile",
-    }
+    },
   ];
   const [Nav, setNav] = useState("hidden");
   if (isLoggedIn === false) {
@@ -52,30 +52,32 @@ const Navbar = () => {
     const lastTwo = links[3];
     links = [...firstTwo, lastTwo];
   }
-  if (role === "publisher"){
+  if (role === "publisher") {
     const firstTwo = links.slice(0, 2);
     const lastTwo = links.slice(-3);
     links = [...firstTwo, ...lastTwo];
   }
-  
+
   return (
     <>
       <nav
-        className="relative flex w-full flex-nowrap items-center justify-between bg-dream-green py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
+        className="relative flex w-full flex-nowrap items-center justify-between bg-[#007E6F] py-2 text-white  lg:flex-wrap lg:justify-start lg:py-4"
         data-twe-navbar-ref
+        src="./../public/logo.png"
+
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <div className="ms-2  w-3/6 lg:w-1/6">
             <Link
               to="/"
               className="flex text-2xl font-semibold items-center justify-center "
-            >
+              >
               <img
-                src="https://cdn-icons-png.flaticon.com/128/10433/10433049.png"
+                src="./../public/logo.png"
                 alt="logo"
-                className="h-10 me-4"
+                className="h-12 w-12 me-4 text-white"
               />{" "}
-              BookHeaven
+              Kitaab Ghar
             </Link>
           </div>
           <div className=" w-1/6 block  lg:hidden">
@@ -101,7 +103,7 @@ const Navbar = () => {
               {links.map((items, i) => (
                 <>
                   {items.title === "Profile" ||
-                  items.title === "Admin Profile" || 
+                  items.title === "Admin Profile" ||
                   items.title === "Publisher Profile" ? (
                     <div
                       className=" rounded  hover:cursor-pointer border border-white px-3 py-1 mx-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
@@ -133,7 +135,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/signup"
-                    className="rounded  bg-white px-3 py-1 mx-3 hover:bg-dream-green text-zinc-600 hover:text-zinc-900 transition-all duration-300"
+                    className="rounded  bg-white px-3 py-1 mx-3 hover:bg-[#007E6F] text-zinc-600 hover:text-zinc-900 transition-all duration-300"
                   >
                     SignUp
                   </Link>
@@ -147,7 +149,9 @@ const Navbar = () => {
         <div className="flex flex-col items-center">
           {links.map((items, i) => (
             <>
-              {items.title === "Profile" || items.title === "Admin Profile" || items.title === "Publisher Profile" ? (
+              {items.title === "Profile" ||
+              items.title === "Admin Profile" ||
+              items.title === "Publisher Profile" ? (
                 <div
                   className=" rounded  hover:cursor-pointer border border-blue-500 px-3 py-1 my-3 hover:bg-white hover:text-zinc-900 transition-all duration-300"
                   key={i}
