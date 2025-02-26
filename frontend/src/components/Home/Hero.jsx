@@ -41,10 +41,10 @@ const Hero = () => {
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#007E6F] via-[#005f56] to-[#003d3a] group-hover:from-[#003d3a] group-hover:via-[#005f56] group-hover:to-[#007E6F] transition-all duration-500"></span>
 
-              <span className="relative px-8 py-3 bg-black text-white rounded-lg transition-all ease-out duration-500 group-hover:bg-opacity-0">
-                <span className="relative flex items-center">
+              <span className="relative px-8 py-3 bg-black text-white rounded-lg transition-all ease-out duration-500 group-hover:bg-opacity-0 border-[2px] border-[#007E6F]">
+                <span className="relative flex items-center ">
                   Discover More
-                  <FaRegArrowAltCircleRight className="ml-2 text-lg transition-transform duration-300 group-hover:translate-x-1" />
+                  <FaRegArrowAltCircleRight className="ml-2 text-lg transition-transform duration-300 group-hover:translate-x-2" />
                 </span>
               </span>
             </Link>
@@ -52,11 +52,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-3/6 h-auto lg:h-[100%] flex items-center justify-center  ">
+      <div className="w-full lg:w-3/6 h-auto lg:h-[100%] flex items-center justify-center">
         <img
           src="/Hero.jpeg"
           alt="hero"
-          className="w-[500px] h-[500px] object-cover"
+          className="w-[500px] h-[500px] object-cover  border-[5px] border-[#007E6F] rounded-[20px]"
         />
       </div>
     </div>
